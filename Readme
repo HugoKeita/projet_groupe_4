@@ -1,0 +1,39 @@
+
+Guide d'Utilisation du Script_Profile_Generator.py
+
+Introduction
+
+Le script script_profile_generator.py vous permet de générer des profils d'utilisateurs aléatoires, que ce soit en ligne ou localement, en fonction du pays spécifié.
+
+Utilisation de la Ligne de Commande
+
+Pour exécuter le script, ouvrez un terminal dans le répertoire du script et utilisez la commande suivante :
+
+python script_profile_generator.py -l <country_code>
+Remplacez <country_code> par le code du pays (par exemple, "AU" pour l'Australie, "FR" pour la France). Exemple :
+
+
+python script_profile_generator.py -l AU
+
+Options de la Ligne de Commande
+
+-l ou --country : Spécifiez le code du pays pour le profil utilisateur. Les codes disponibles sont : FR, AU, BR, CA, CH, DE, DK, ES, FI, GB, IE, IN, IR, MX, NL, NO, NZ, RS, TR, UA, US.
+Fonctionnalités du Script
+
+Génération de Profils Aléatoires :
+
+Utilise la classe LocalRandomProfile pour générer des profils aléatoires en ligne ou localement, selon le pays spécifié.
+Affichage du Profil Généré :
+
+Affiche un résumé du profil généré, avec des détails tels que le genre, le nom, l'emplacement, l'identifiant, l'e-mail, la date de naissance, le nom d'utilisateur, le mot de passe, le sel, etc.
+Sauvegarde du Profil en Fichier JSON :
+
+Enregistre le profil généré au format JSON dans le dossier Generated_profiles. Le fichier est nommé selon le prénom et le nom de famille de l'utilisateur, suivi de "_online.json" pour les profils en ligne et ".json" pour les profils locaux.
+Téléchargement de l'Image Associée :
+
+Télécharge l'image associée au profil dans le dossier Generated_profiles. Pour les profils en ligne, il télécharge l'image à partir de l'URL spécifiée dans les résultats de la requête en ligne. Pour les profils locaux (FR), il sélectionne une image aléatoire du dossier correspondant au genre de l'utilisateur.
+Remarques Importantes
+
+Assurez-vous que le script est exécuté dans un environnement Python avec les dépendances requises installées (argparse, json, os, urllib, shutil, glob, random, et LocalRandomProfile).
+Pour éviter les erreurs, assurez-vous d'avoir une connexion Internet stable pour la génération en ligne et vérifiez que les images locales sont disponibles.
+C'est tout ! Vous pouvez maintenant générer des profils d'utilisateurs aléatoires en utilisant ce script.
